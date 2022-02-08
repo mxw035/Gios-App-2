@@ -1,0 +1,16 @@
+<h2>Prizes</h2>
+<div>
+  <p id="results"></p>
+  <form>
+    <input id="prize" type="text" placeholder="Prizename" autocomplete="off"></input>
+    <input id="amount" type="number" placeholder="Point Value" autocomplete="off"></input>
+    <button id="add">Add Prize</button>
+  </form>
+</div>
+<script>
+  $("document").ready(function(){
+    $("#add").click(function(event){
+      $("#results").html(event.target.data)
+    });//end of add 
+  }); //end of doc ready
+</script>
