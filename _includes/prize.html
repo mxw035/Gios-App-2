@@ -8,20 +8,19 @@
   </form>
 </div>
 <script>
-  
-  $("document").ready(function(){
-    
     function prizename(event) {
      let name = event.target.value
-     return name;
+     localStorage.setItem("prizename", name)
   }
   function prizeamount(event){
     let amt = event.target.value
-    return amt 
+    localStorage.setItem("prizeamout", amt)
   }
+  
+  $("document").ready(function(){
     $("#add").click(function(){
-      let name = prizename()
-      let amt = prizeamount()
+      let name = localStorage.getItem("prizename")
+      let amt = localStorage.getItem("prizeamount")
       $("#results").html(name + ":" + amt)
     });//end of add
     
