@@ -7,24 +7,25 @@
   <h2>Negative</h2>
   <button id="neg10" class="w3-red w3-button w3-round">-10</button>
 </div>
-<script>
+<div>
+  <p>New to app enter info here:</p>
+  <form>
+  <input type="text" id="name"></input>
+  <button id="s" type="submit">Submit</button>
+  </form>
+</div>
+  <script>
   $("document").ready(function(){
-    let base = 0
+    $("#s").click(function(event){
+      let name = event.target.value
+      let points = 0
+      localStorage.setItem("points", points)
+      localStorage.setItem("name", name)
+      $("#num").html(name + ":" + points)
+    })//end of s 
+    let name = localStorage.getItem("name")
     let points = localStorage.getItem("points")
-    if(points > 0){
-      $("#add10").click(function(){
-        let newPoints = points + 10
-        localStorage.setItem("points", newPoints)
-        $("#num").html(newpoints)
-      });//end of add
-    }else if(points <= 0){
-      $("#add10").click(function(){
-        let newPoints = base + 10
-        localStorage.setItem("points", newPoints)
-        $("#num").html(newpoints)
-      });//end of add
-    }//end of if else
+    $("#num").html(name + ":" + points)
     
-    
-  });
+  });//end doc ready
 </script>
