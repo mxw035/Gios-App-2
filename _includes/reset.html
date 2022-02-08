@@ -1,0 +1,12 @@
+<div class="w3-half">
+  <button id="reset">Reset Points</button>
+  
+</div>
+<script>
+  $("document").ready(function(){
+    $("#reset").click(function(){
+      localStorage.removeItem("points")
+      localStorage.setItem("points", 0)
+    });
+  });//end of doc ready
+</script>
