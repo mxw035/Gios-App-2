@@ -1,28 +1,9 @@
 <h2>Prizes</h2>
 <div>
   <p id="results"></p>
-  <form id="newprize">
+  <form id="newprize" action="https://github.com/mxw035/Gios-App-2/blob/1d122f8c7be54282daf1bfc26007f160b6f10453/form.txt" method="get">
     <input id="prize" type="text" placeholder="Prizename" autocomplete="off" onchange="prizename(event)"></input>
     <input id="amount" type="number" placeholder="Point Value" autocomplete="off" onchange="prizeamount(event)"></input>
-    <button id="add">Add Prize</button>
+    <button type="submit" id="add">Add Prize</button>
   </form>
 </div>
-<script>
-    function prizename(event) {
-     let name = event.target.value
-     localStorage.setItem("prizename", name)
-  }
-  function prizeamount(event){
-    let amt = event.target.value
-    localStorage.setItem("prizeamout", amt)
-  }
-  
-  $("document").ready(function(){
-    $("#add").click(function(){
-      let name = localStorage.getItem("prizename")
-      let amt = localStorage.getItem("prizeamount")
-      $("#results").html(name + ":" + amt)
-    });//end of add
-    
-  }); //end of doc ready
-</script>
