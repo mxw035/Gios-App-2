@@ -1,7 +1,7 @@
 <h2>Prizes</h2>
 <div>
   <p id="results"></p>
-  <form>
+  <form id="newprize">
     <input id="prize" type="text" placeholder="Prizename" autocomplete="off"></input>
     <input id="amount" type="number" placeholder="Point Value" autocomplete="off"></input>
     <button id="add">Add Prize</button>
@@ -10,7 +10,14 @@
 <script>
   $("document").ready(function(){
     $("#add").click(function(event){
-      $("#results").html(event.target.data)
+     let x = document.getElementById("newprize")
+     let text = ''
+     var i;
+      for(i = 0;, i < x.length; i++){
+        text += x.elements[i].value + "<br>"
+      }
+      $("#results").html(text)
+      
     });//end of add 
   }); //end of doc ready
 </script>
