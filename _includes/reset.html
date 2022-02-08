@@ -7,6 +7,9 @@
     $("#reset").click(function(){
       localStorage.removeItem("points")
       localStorage.setItem("points", 0)
-    });
+      let name = localStorage.getItem("name")
+      let points = localStorage.getItem("points")
+      $("#num").html(name + ":" + points)
+    });//end of reset
   });//end of doc ready
 </script>
