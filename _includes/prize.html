@@ -2,22 +2,28 @@
 <div>
   <p id="results"></p>
   <form id="newprize">
-    <input id="prize" type="text" placeholder="Prizename" autocomplete="off"></input>
-    <input id="amount" type="number" placeholder="Point Value" autocomplete="off"></input>
+    <input id="prize" type="text" placeholder="Prizename" autocomplete="off" onchange="prizename(event)"></input>
+    <input id="amount" type="number" placeholder="Point Value" autocomplete="off" onchange="prizeamount(event)"></input>
     <button id="add">Add Prize</button>
   </form>
 </div>
 <script>
+  
   $("document").ready(function(){
-    $("#add").click(function(event){
-     let x = document.getElementById("newprize")
-     let text = ''
-     var i;
-      for(i = 0;, i < x.length; i++){
-        text += x.elements[i].value + "<br>"
-      }
-      $("#results").html(x)
-      
-    });//end of add 
+    
+    function prizename(event) {
+     let name = event.target.value
+     return name;
+  }
+  function prizeamount(event){
+    let amt = event.target.value
+    return amt 
+  }
+    $("#add").click(function(){
+      let name = prizename()
+      let amt = prizeamount()
+      $("#results").html(name + ":" + amt)
+    });//end of add
+    
   }); //end of doc ready
 </script>
