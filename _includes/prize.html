@@ -1,9 +1,9 @@
 <h2>Prizes</h2>
 <nav>
-  <button id="50">50</button>
-  <button id="100">100</button>
-  <button id="500">500</button>
-  <button id="1000">1000</button>
+  <button id="50" class="pz">50</button>
+  <button id="100" class="pz">100</button>
+  <button id="500" class="pz">500</button>
+  <button id="1000" class="pz">1000</button>
 </nav>
 <div>
   <h2 id="current"></h2>
@@ -26,25 +26,22 @@
   </div>
 <script>
   $("document").ready(function(){
-    $('.hund').hide();
-    $('.fifty').hide();
-    $('.fiveH').hide();
-    $('.thous').hide();
+    $(".pz").hide();
     let points = parseInt(localStorage.getItem("points"))
     $("#current").html(points)
     $("#50").click(function(){
-      $(".fifty").show();
+      $(".fifty").toggle();
     });/end of button
     $("#100").click(function(){
-      $(".hund").show();
+      $(".hund").toggle();
     });/end of button
     $("#500").click(function(){
-      $(".fiveH").show();
+      $(".fiveH").toggle();
     });/end of button
     $("#1000").click(function(){
-      $(".thous").show();
+      $(".thus").toggle();
     });/end of button
-    $("#box").click(function(event){
+    $("#box").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) - 100
       localStorage.setItem("points", newPoints)
@@ -75,5 +72,5 @@
       $("#current").html(newPoints)
     });//end of button 
     
-  });
+  });//end of doc ready 
 </script>
