@@ -9,6 +9,7 @@
   <h2>Negative</h2>
   <button id="neg10" class="neg w3-red w3-button w3-round">-10</button>
 </div>
+{% include positive.html %}
 <script>
   $("document").ready(function(){
     localStorage.setItem("name", "Gio")
@@ -28,6 +29,11 @@
       localStorage.setItem("points", newPoints)
       let name = localStorage.getItem("name")
       $("#num").html(name + ": " + newPoints)
+    });
+    $("button").click(function(){
+      let points = localStorage.getItem("points")
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ": " + points)
     });
   });
 </script>
