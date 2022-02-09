@@ -1,17 +1,17 @@
 <div class="w3-half w3-green">
   <h3 id="number"></h3>
-  <button id="clothes" value=10>Getting Dressed</button>
-  <button id="teeth" value=10>Brushing Teeth</button>
-  <button id="brush" value=10>Brushing Hair</button>
-  <button id="hands" value=10>Wash Hands</button>
-  <button id="read" value=50>Reading</button>
-  <button id="home" value=50>Homework</button>
-  <button id="listen" value=10>Listening First Time</button>
-  <button id="clean" value=20>Cleaning Up Mess</button>
-  <button id="bath" value=10>Taking Bath</button>
-  <button id="outside" value=30>Outside Time</button>
-  <button id="friend" value=30>Being a kind Friend</button>
-  <button id="kind" value=10>Showing Kindness</button>
+  <button id="clothes" value="10">Getting Dressed</button>
+  <button id="teeth" value="10">Brushing Teeth</button>
+  <button id="brush" value="10">Brushing Hair</button>
+  <button id="hands" value="10">Wash Hands</button>
+  <button id="read" value="50">Reading</button>
+  <button id="home" value="50">Homework</button>
+  <button id="listen" value="10">Listening First Time</button>
+  <button id="clean" value="20">Cleaning Up Mess</button>
+  <button id="bath" value="10">Taking Bath</button>
+  <button id="outside" value="30">Outside Time</button>
+  <button id="friend" value="30">Being a kind Friend</button>
+  <button id="kind" value="10">Showing Kindness</button>
 </div>
 <script>
   $("document").ready(function(){
@@ -20,7 +20,7 @@
     $("button").click(function(event){
       let amt = event.target.value
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + amt
+      let newPoints = parseInt(points) + parseInt(amt)
       localStorage.setItem("points")
       $("#number").html(newPoints)
     });//end of gen button
