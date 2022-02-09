@@ -29,12 +29,8 @@
       localStorage.setItem("points", newPoints)
       let name = localStorage.getItem("name")
       $("#num").html(name + ": " + newPoints)
-    });
-    $("button").click(function(){
-      let points = localStorage.getItem("points")
-      let name = localStorage.getItem("name")
-      $("#num").html(name + ": " + points)
-    });
-  });
+    });//end of neg 10
+    
+  });//end doc ready
 </script>
 
