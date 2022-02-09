@@ -1,12 +1,16 @@
 <h2>Prizes</h2>
 <div>
   <h2 id="current"></h2>
-  <button id="box" value={250}>Prize Box</button>
+  <button id="box" class="bp" value={250}>Prize Box</button>
 </div>
 <script>
   $("document").ready(function(){
+    $('.bp").hide();
     let points = localStorage.getItem("points")
     $("#current").html(points)
+    if(points >= 250){
+      $('.bp').show();
+    }//end of if 
     $("#box").click(function(event){
       let num = event.target.value
       let points = localStorage.getItem("points")
