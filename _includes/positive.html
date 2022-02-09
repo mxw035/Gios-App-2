@@ -1,46 +1,118 @@
 <div class="w3-half w3-green">
-  <button id="clothes" class="ten" value="10">Getting Dressed</button>
-  <button id="teeth" class="ten" value="10">Brushing Teeth</button>
-  <button id="brush" class="ten" value="10">Brushing Hair</button>
-  <button id="hands" class="ten" value="10">Wash Hands</button>
-  <button id="read" class="fif" value="50">Reading</button>
-  <button id="home" class="fif" value="50">Homework</button>
-  <button id="listen" class="ten" value="10">Listening First Time</button>
-  <button id="clean" class="twen" value="20">Cleaning Up Mess</button>
-  <button id="bath" class="ten" value="10">Taking Bath</button>
-  <button id="outside" class="thir" value="30">Outside Time</button>
-  <button id="friend" class="thir" value="30">Being a kind Friend</button>
-  <button id="kind" class="ten" value="10">Showing Kindness</button>
-  <button id="apologize" class="five">Apologize</button>
-  <button id="wake" class="ten">Wake Up</button>
+  <button id="clothes" >Getting Dressed</button>
+  <button id="teeth">Brushing Teeth</button>
+  <button id="brush">Brushing Hair</button>
+  <button id="hands" >Wash Hands</button>
+  <button id="read" >Reading</button>
+  <button id="home">Homework</button>
+  <button id="listen" >Listening First Time</button>
+  <button id="clean" >Cleaning Up Mess</button>
+  <button id="bath" >Taking Bath</button>
+  <button id="outside" >Outside Time</button>
+  <button id="friend" >Being a kind Friend</button>
+  <button id="kind" >Showing Kindness</button>
+  <button id="apologize" >Apologize</button>
+  <button id="wake" >Wake Up</button>
+  <button id="bed"> In bed by 9</button>
+  <button id="room">Clean Room</button>
 </div>
 <script>
   $("document").ready(function(){
-    $(".ten").click(function(event){
+    $("#clothes").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + 10
-      localStorage.setItem("points", newPoints)
-      $("#num").html(name + ":" + newPoints)
-    });//end of class 10
-    $(".twen").click(function(){
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#teeth").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + 20 
-      localStorage.setItem("points", newPoints)
-    });//end of twen
-    $(".thir").click(function(){
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#brush").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + 30 
-      localStorage.setItem("points", newPoints)
-    });//end of twen
-    $(".fif").click(function(){
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#hands").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + 30 
-      localStorage.setItem("points", newPoints)
-    });//end of twen
-    $(".five").click(function(){
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#read").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + 5 
-      localStorage.setItem("points", newPoints)
-    });//end of five
+      let np = parseInt(points) + 50 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#home").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 50 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#listen").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#clean").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#bath").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#outside").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 30 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#friend").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 30 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#kind").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#apologize").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 5
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#wake").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#bed").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 10 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
+    $("#room").click(function(){
+      let points = localStorage.getItem("points")
+      let np = parseInt(points) + 100 
+      localStorage.setItem("points", np)
+      $("#num").html("Gio :" + np)
+    });//end of button
   });/end doc ready
 </script>
