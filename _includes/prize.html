@@ -1,44 +1,73 @@
 <h2>Prizes</h2>
 <div>
   <h2 id="current"></h2>
-  
   <div class="fifty">
+    <h3>50 Points</h3>
     <button id="screen">1 hour extra Screen Time</button>
   </div>
   <div class="hund">
+    <h3>100 Points</h3>
     <button id="box" value=250>Prize Box</button>
     <button id="1d">1 Dollar</button>
   </div>
+  <div class="fiveH">
+    <h3>500 Points</h3>
+    <button id="5d">5 Dollars</button>
+  </div>
+  <div class="thus">
+    <h3>1000 Points</h3>
+    <button id="10d">10 Dollars</button>
   </div>
 <script>
   $("document").ready(function(){
     $('.hund').hide();
     $(".fifty").hide();
+    $(".fiveH").hide();
+    $(".thous").hide();
     let points = parseInt(localStorage.getItem("points"))
     $("#current").html(points)
     if(points >= 50){
       $(".fifty").show();
-    }
+    }//end if 50 
     if(points >= 100){
       $('.hund').show();
-    }//end of if 
+    }//end of if 100
+    if(points >= 500){
+      $(".fiveH").show();
+    }// end of if 500
+    if(points >= 1000){
+      $(".thous").show();
+    }//end of if 500
     $("#box").click(function(event){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) - 100
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
     });//end of box
-    $("#screen").click(function(){
-      let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 50
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
-    });//end of screen
     $("#1d").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) - 100
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
     });//end of 1d
+    $("#screen").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 50
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });//end of screen
+    $("#5d").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 500
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });//end of button 
+    $("#10d").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 1000
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });//end of button 
+    
   });
 </script>
