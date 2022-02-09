@@ -5,6 +5,10 @@
   <h2>Positive</h2>
   <button id="add10" class="pos w3-green w3-button w3-round">10</button>
 </div>
+<div class="w3-half">
+  <h2>Negative</h2>
+  <button id="neg10" class="neg w3-red w3-button w3-round">-10</button>
+</div>
 <script>
   $("document").ready(function(){
     localStorage.setItem("name", "Gio")
@@ -18,6 +22,13 @@
       let name = localStorage.getItem("name")
       $("#num").html(name + ":" + newPoints)
     });//end of gen button
+    $("#neg10").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 10
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ":" + newPoints)
+    });
   });
 </script>
 
