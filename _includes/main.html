@@ -1,11 +1,55 @@
 <div>
   <h2 id="num"></h2>
 </div>
-<div class="w3-half">
-  <h2>Positive</h2>
-  <button id="add10" class="pos w3-green w3-button w3-round">10</button>
-  <button id="testadd">Test</button>
-</div>
+<div>
+  <h2 class="w3-center">Positive</h2>
+  <div class="w3-half">
+    <h3>5 Points</h3>
+    <ul>
+      <li>Apologized</li>
+    </ul>
+    <button id="add5" class="w3-round w3-green w3-button">5</button>
+  </div>
+  <div class="w3-half">
+    <h3>10 Positive Points</h3>
+    <ul>
+      <li>Getting Dressed</li>
+      <li>Brush Teeth</li>
+      <li>Brush Hair</li>
+      <li>Bath Time</li>
+      <li>Being Kind</li>
+      <li>Asking for help</li>
+      <li>Listening the first time</li>
+      <li>Wake up</li>
+      <li>In bed by 9</li>
+      <li>Cleaning Up</li>
+    </ul>
+    <button id="add10" class="pos w3-green w3-button w3-round">10</button>
+    <button id="testadd">Test</button>
+  </div>
+  <div class="w3-half">
+    <h3>30 Points</h3>
+    <ul>
+      <li>Outside time</li>
+      <li>Friend time</li>
+    </ul>
+    <button id="add30" class="w3-round w3-button w3-green">30</button>
+  </div>
+  <div class="w3-half">
+    <h3>50 Points</h3>
+    <ul>
+      <li>Reading time</li>
+      <li>Completed Homework</li>
+    </ul>
+    <button id="add50" class="w3-round w3-button w3-green">50</button>
+  </div>
+  <div class="w3-half">
+    <h3>100 Points</h3>
+    <ul>
+      <li>Clean Room</li>
+    </ul>
+    <button id="add100" class="w3-round w3-button w3-green">100</button>
+  </div>
 <div class="w3-half">
   <h2>Negative</h2>
   <button id="neg10" class="neg w3-red w3-button w3-round">-10</button>
@@ -16,9 +60,37 @@
     let points = localStorage.getItem("points")
     let name = localStorage.getItem("name")
     $("#num").html(name + ": " + points)
+    $("#add5").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) + 5
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ": " + newPoints)
+    });//end of gen button
     $("#add10").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) + 10
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ": " + newPoints)
+    });//end of gen button
+    $("#add30").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) + 30
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ": " + newPoints)
+    });//end of gen button
+    $("#add50").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) + 50
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ": " + newPoints)
+    });//end of gen button
+    $("#add100").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) + 100
       localStorage.setItem("points", newPoints)
       let name = localStorage.getItem("name")
       $("#num").html(name + ": " + newPoints)
