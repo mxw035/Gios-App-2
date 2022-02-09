@@ -1,12 +1,14 @@
 <h2>Prizes</h2>
 <div>
   <h2 id="current"></h2>
-  <button id="box" class="bp" value={250}>Prize Box</button>
-</div>
+  <div class="bp">
+  <button id="box" value=250>Prize Box</button>
+  </div>
+  </div>
 <script>
   $("document").ready(function(){
-    $('.bp").hide();
-    let points = localStorage.getItem("points")
+    $('.bp').hide();
+    let points = parseInt(localStorage.getItem("points"))
     $("#current").html(points)
     if(points >= 250){
       $('.bp').show();
@@ -14,7 +16,7 @@
     $("#box").click(function(event){
       let num = event.target.value
       let points = localStorage.getItem("points")
-      let newPoints = points - num 
+      let newPoints = parseInt(points) - num 
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
     });
