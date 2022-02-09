@@ -1,5 +1,4 @@
 <div class="w3-half w3-green">
-  <h3 id="number"></h3>
   <button id="clothes" value="10">Getting Dressed</button>
   <button id="teeth" value="10">Brushing Teeth</button>
   <button id="brush" value="10">Brushing Hair</button>
@@ -16,13 +15,13 @@
 <script>
   $("document").ready(function(){
     let points = localStorage.getItem("points")
-    $("#number").html(points)
     $("button").click(function(event){
       let amt = event.target.value
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) + parseInt(amt)
       localStorage.setItem("points")
-      $("#number").html(newPoints)
+      let name = localSotrage.getItem("name")
+      $("#num").html(name + ":" + newPoints)
     });//end of gen button
   });/end doc ready
 </script>
