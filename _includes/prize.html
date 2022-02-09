@@ -19,36 +19,59 @@
   </div>
 <script>
   $("document").ready(function(){
-    $(".pz").hide();
     let points = parseInt(localStorage.getItem("points"))
     $("#current").html("Gio : " + points)
     
     $("#box").click(function(){
+      let num = 100
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 100
+      if(points >= num){
+      let newPoints = parseInt(points) - num
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
+      }else {
+        $("#current").html("Not Enought Points")
+      }
+      
     });//end of box
     
     $("#1d").click(function(){
+      let num = 100
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 100
+      if(points >= num){
+      let newPoints = parseInt(points) - num
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
+      }else {
+        $("#current").html("Not Enought Points")
+      }
+      
     });//end of 1d
     
     $("#screen").click(function(){
+      let num = 50
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 50
+      if(points >= num){
+      let newPoints = parseInt(points) - num
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
+      }else {
+        $("#current").html("Not Enought Points")
+      }
+      
     });//end of screen
     
     $("#5d").click(function(){
+      let num = 500
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 500
+      if(points >= num){
+      let newPoints = parseInt(points) - num
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
+      }else {
+        $("#current").html("Not Enought Points")
+      }
+      
     });//end of button 
     
     $("#10d").click(function(){
