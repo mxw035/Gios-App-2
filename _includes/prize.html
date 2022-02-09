@@ -1,13 +1,13 @@
 <h2>Prizes</h2>
 <div>
   <p id="results"></p>
-  <form id="test" action="/action_page.php">
+  <form id="test">
     <input id="prize" type="text" placeholder="Prizename" autocomplete="off" ></input>
     <input id="amount" type="number" placeholder="Point Value" autocomplete="off"></input>
     <button type="submit" id="add">Add Prize</button>
   </form>
 </div>
 <script>
-  var x = document.getElementById("test").action
+  var x = document.getElementById("test")
   document.getElementById("results").innerHTML = x;
 </script>
