@@ -1,12 +1,23 @@
 <div>
   <h2 id="num"></h2>
 </div>
-{% include change.html %}
+<div class="w3-half">
+  <h2>Positive</h2>
+  <button id="add10" class="pos w3-green w3-button w3-round">10</button>
+</div>
 <script>
   $("document").ready(function(){
     localStorage.setItem("name", "Gio")
     let points = localStorage.getItem("points")
     let name = localStorage.getItem("name")
     $("#num").html(name + ":" + points)
+    $("#add10").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) + 10
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
+      $("#num").html(name + ":" + newPoints)
+    });//end of gen button
   });
 </script>
+
