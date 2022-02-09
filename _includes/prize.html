@@ -1,13 +1,18 @@
 <h2>Prizes</h2>
 <div>
-  <p id="results"></p>
-  <form id="test">
-    <input id="prize" type="text" placeholder="Prizename" autocomplete="off" ></input>
-    <input id="amount" type="number" placeholder="Point Value" autocomplete="off"></input>
-    <button type="submit" id="add">Add Prize</button>
-  </form>
+  <h2 id="current"></h2>
+  <button id="box" value={250}>Prize Box</button>
 </div>
 <script>
-  var x = document.getElementById("test")
-  document.getElementById("results").innerHTML = x;
+  $("document").ready(function(){
+    let points = localStorage.getItem("points")
+    $("#current").html(points)
+    $("#box").click(function(event){
+      let num = event.target.value
+      let points = localStorage.getItem("points")
+      let newPoints = points - num 
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });
+  });
 </script>
