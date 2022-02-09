@@ -3,30 +3,15 @@
   <h2>Positive</h2>
   <button id="add10" class="pos w3-green w3-button w3-round">10</button>
 </div>
-<div class="w3-half w3-green">
-  <button id="clothes" class="pos" value="10">Getting Dressed</button>
-  <button id="teeth" class="pos" value="10">Brushing Teeth</button>
-  <button id="brush" class="pos" value="10">Brushing Hair</button>
-  <button id="hands" class="pos" value="10">Wash Hands</button>
-  <button id="read" class="pos" value="50">Reading</button>
-  <button id="home" class="pos" value="50">Homework</button>
-  <button id="listen" class="pos" value="10">Listening First Time</button>
-  <button id="clean" class="pos" value="20">Cleaning Up Mess</button>
-  <button id="bath" class="pos" value="10">Taking Bath</button>
-  <button id="outside" class="pos" value="30">Outside Time</button>
-  <button id="friend" class="pos" value="30">Being a kind Friend</button>
-  <button id="kind" class="pos" value="10">Showing Kindness</button>
-</div>
 <script>
   $("document").ready(function(){
     localStorage.setItem("name", "Gio")
     let name = localStorage.getItem("name")
     let points = localStorage.getItem("points")
     $("#num").html(name + ": " + points)
-    $(".pos").click(function(event){
-      let amt = event.target.value
+    $("#add10").click(function(){
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) + parseInt(amt)
+      let newPoints = parseInt(points) + 10
       localStorage.setItem("points")
       let name = localSotrage.getItem("name")
       $("#num").html(name + ":" + newPoints)
