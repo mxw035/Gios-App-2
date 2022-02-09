@@ -52,10 +52,16 @@
     });//end of button 
     
     $("#10d").click(function(){
+      let num = 1000
       let points = localStorage.getItem("points")
-      let newPoints = parseInt(points) - 1000
+      if(points >= num){
+      let newPoints = parseInt(points) - num
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
+      }else {
+        $("#current").html("Not Enought Points")
+      }
+      
     });//end of button 
     
   });//end of doc ready 
