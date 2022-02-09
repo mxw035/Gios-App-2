@@ -14,20 +14,20 @@
     localStorage.setItem("name", "Gio")
     let points = localStorage.getItem("points")
     let name = localStorage.getItem("name")
-    $("#num").html(name + ":" + points)
+    $("#num").html(name + ": " + points)
     $("#add10").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) + 10
       localStorage.setItem("points", newPoints)
       let name = localStorage.getItem("name")
-      $("#num").html(name + ":" + newPoints)
+      $("#num").html(name + ": " + newPoints)
     });//end of gen button
     $("#neg10").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) - 10
       localStorage.setItem("points", newPoints)
       let name = localStorage.getItem("name")
-      $("#num").html(name + ":" + newPoints)
+      $("#num").html(name + ": " + newPoints)
     });
   });
 </script>
