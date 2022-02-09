@@ -1,24 +1,44 @@
 <h2>Prizes</h2>
 <div>
   <h2 id="current"></h2>
-  <div class="bp">
-  <button id="box" value=250>Prize Box</button>
+  
+  <div class="fifty">
+    <button id="screen">1 hour extra Screen Time</button>
+  </div>
+  <div class="hund">
+    <button id="box" value=250>Prize Box</button>
+    <button id="1d">1 Dollar</button>
   </div>
   </div>
 <script>
   $("document").ready(function(){
-    $('.bp').hide();
+    $('.hund').hide();
+    $(".fifty").hide();
     let points = parseInt(localStorage.getItem("points"))
     $("#current").html(points)
+    if(points >= 50){
+      $(".fifty").show();
+    }
     if(points >= 100){
-      $('.bp').show();
+      $('.hund').show();
     }//end of if 
     $("#box").click(function(event){
-      let num = 100
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) - 100
       localStorage.setItem("points", newPoints)
       $("#current").html(newPoints)
-    });
+    });//end of box
+    $("#screen").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 50
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });//end of screen
+    $("#1d").click(function(){
+      let points = localStorage.getItem("points")
+      let newPoints = parseInt(points) - 100
+      localStorage.setItem("points", newPoints)
+      $("#current").html(newPoints)
+    });//end of 1d
   });
 </script>
