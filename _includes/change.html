@@ -4,15 +4,11 @@
 </div>
 <script>
   $("document").ready(function(){
-    localStorage.setItem("name", "Gio")
-    let name = localStorage.getItem("name")
-    let points = localStorage.getItem("points")
-    $("#num").html(name + ": " + points)
     $("#add10").click(function(){
       let points = localStorage.getItem("points")
       let newPoints = parseInt(points) + 10
-      localStorage.setItem("points")
-      let name = localSotrage.getItem("name")
+      localStorage.setItem("points", newPoints)
+      let name = localStorage.getItem("name")
       $("#num").html(name + ":" + newPoints)
     });//end of gen button
   });/end doc ready
