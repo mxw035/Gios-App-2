@@ -18,7 +18,19 @@
     <button id="10d">10 Dollars</button>
   </div>
 <div>
-  {% include hamster.html %}
+  <h2>Hamster</h2>
+<ol>
+  <li>Cage 49.99</li>
+  <li> Food 9.99</li>
+  <li> Chew sticks 4.29</li>
+  <li> Ball 8.29</li>
+</ol>
+<div>
+  <button id="cage" class="ham" value={5000}>Cage 5000</button>
+  <button id="food" class="ham" value={1000}>Food 1000</button>
+  <button id="sitcks" class="ham" value={500}>Sticks 500</button>
+  <button id="ball" class="ham" value={900}> Ball 900</button>
+</div>
 </div>
 <script>
   $("document").ready(function(){
@@ -90,13 +102,11 @@
       
     });//end of button 
     
-    $(".ham").click(function(event){
-      let points = event.target.value
-      console.log(points)
+    $("#cage").click(function(){
       let current = localstorage.getItem("points")
-      let newP = parseInt(current) - points 
+      let newP = parseInt(current) - 5000
       localstorage.setItem("points", newP)
-      $("#totalC").html("Gio Points: " + newP)
+      $("#current").html(newP)
     });//end of button click
     
   });//end of doc ready 
