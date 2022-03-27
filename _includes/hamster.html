@@ -12,7 +12,11 @@
   <button id="ball" value={900}> Ball 900</button>
 </div>
 <script>
-  $("document").ready(function(
-                      
-                     ))
+  $("document").ready(function() {
+    $("button").click(function(event){
+      let points = event.target.value
+      console.log(points)
+      
+    });
+  });
 </script>
