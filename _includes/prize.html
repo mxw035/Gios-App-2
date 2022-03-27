@@ -25,11 +25,11 @@
   <li> Chew sticks 4.29</li>
   <li> Ball 8.29</li>
 </ol>
-<div>
-  <button id="cage" class="ham" value={5000}>Cage 5000</button>
-  <button id="food" class="ham" value={1000}>Food 1000</button>
-  <button id="sitcks" class="ham" value={500}>Sticks 500</button>
-  <button id="ball" class="ham" value={900}> Ball 900</button>
+<div class="w3-half">
+  <button id="cage">Cage 5000</button>
+  <button id="food">Food 1000</button>
+  <button id="sitcks">Sticks 500</button>
+  <button id="ball"> Ball 900</button>
 </div>
 </div>
 <div>
@@ -152,12 +152,7 @@
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
      }); //end of button 
-     $("button").click(function(event){
-       let name = event.target.value
-       let hx = localstorage.getItem("log")
-       let log = hx + " " + name
-       localstorage.setItem("log", log)
-       });
+
     $("#log:).click(function() {
       let log = localstorage.getItem("log")
       $("#log").html(log)
