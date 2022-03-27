@@ -1,4 +1,5 @@
-<h1>Hamster</h1>
+<h1 id="totalC">Points</h1>
+<h2>Hamster</h2>
 <ol>
   <li>Cage 49.99</li>
   <li> Food 9.99</li>
@@ -13,12 +14,15 @@
 </div>
 <script>
   $("document").ready(function() {
+    let cur = localstorage.getItem("points")
+    $("#totalC").html("Gio Points:" + cur)                                       
     $("button").click(function(event){
       let points = event.target.value
       console.log(points)
       let current = localstorage.getItem("points")
       let newP = parseInt(current) - points 
-      localstorage.setItem("points")
+      localstorage.setItem("points", newP)
+      $("#totalC").html("Gio Points: " + newP)
     });
   });
 </script>
