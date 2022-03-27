@@ -17,6 +17,9 @@
     <h3>1000 Points</h3>
     <button id="10d">10 Dollars</button>
   </div>
+<div>
+  {% include hamster.html %}
+</div>
 <script>
   $("document").ready(function(){
     let points = parseInt(localStorage.getItem("points"))
@@ -89,7 +92,7 @@
     
     let cur = localstorage.getItem("points")
     $("#totalC").html("Gio Points:" + cur)                                       
-    $("button").click(function(event){
+    $(".ham").click(function(event){
       let points = event.target.value
       console.log(points)
       let current = localstorage.getItem("points")
