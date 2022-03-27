@@ -87,5 +87,16 @@
       
     });//end of button 
     
+    let cur = localstorage.getItem("points")
+    $("#totalC").html("Gio Points:" + cur)                                       
+    $("button").click(function(event){
+      let points = event.target.value
+      console.log(points)
+      let current = localstorage.getItem("points")
+      let newP = parseInt(current) - points 
+      localstorage.setItem("points", newP)
+      $("#totalC").html("Gio Points: " + newP)
+    });//end of button click
+    
   });//end of doc ready 
 </script>
