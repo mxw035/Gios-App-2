@@ -44,10 +44,14 @@
     $("#box").click(function(){
       let num = 100
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        localStorage.setItem("points", newPoints)
+        let newLog = log + "Prize: Box"
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
+        
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -57,9 +61,12 @@
     $("#1d").click(function(){
       let num = 100
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
+        let newPoints = parseInt(points) - num
+        localStorage.setItem("points", newPoints)
+        let newLog = log + ", Prize 1 $"
+        localStorage.setItem("log", newLog)
       $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
@@ -70,10 +77,13 @@
     $("#screen").click(function(){
       let num = 50
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        localStorage.setItem("points", newPoints)
+        let newLog = log + "Prize: Screen Time")
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -83,10 +93,13 @@
     $("#5d").click(function(){
       let num = 500
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: 5 $"
+        localStorage.setItem("points", newPoints)
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -96,10 +109,13 @@
     $("#10d").click(function(){
       let num = 1000
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: 10$"
+        localStorage.setItem("points", newPoints)
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -109,10 +125,13 @@
      $("#cage").click(function(){
       let num = 5000
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: cage"
+        localStorage.setItem("points", newPoints)
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -121,10 +140,13 @@
       $("#food").click(function(){
       let num = 1000
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: food"
+        localStorage.setItem("points", newPoints)
+        localStoage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -133,10 +155,13 @@
      $("#sticks").click(function(){
       let num = 500
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: stikcs"
+        localStorage.setItem("points", newPoints)
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
@@ -144,17 +169,20 @@
      $("#ball").click(function(){
       let num = 900
       let points = localStorage.getItem("points")
+      let log = localStorage.getItem("log")
       if(points >= num){
-      let newPoints = parseInt(points) - num
-      localStorage.setItem("points", newPoints)
-      $("#current").html(newPoints)
+        let newPoints = parseInt(points) - num
+        let newLog = log + "Prize: ball" 
+        localStorage.setItem("points", newPoints)
+        localStorage.setItem("log", newLog)
+        $("#current").html(newPoints)
       }else {
         $("#current").html("Not Enought Points. " + "Your Points : " + points)
       }
      }); //end of button 
 
     $("#log:).click(function() {
-      let log = localstorage.getItem("log")
+      let log = localStorage.getItem("log")
       $("#log").html(log)
     });//end of log button 
   });//end of doc ready 
