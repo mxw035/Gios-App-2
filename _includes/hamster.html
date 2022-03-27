@@ -16,7 +16,9 @@
     $("button").click(function(event){
       let points = event.target.value
       console.log(points)
-      
+      let current = localstorage.getItem("points")
+      let newP = parseInt(current) - points 
+      localstorage.setItem("points")
     });
   });
 </script>
