@@ -7,22 +7,8 @@
   <li> Ball 8.29</li>
 </ol>
 <div>
-  <button id="cage" value={5000}>Cage 5000</button>
-  <button id="food" value={1000}>Food 1000</button>
-  <button id="sitcks" value={500}>Sticks 500</button>
-  <button id="ball" value={900}> Ball 900</button>
+  <button id="cage" class="ham" value={5000}>Cage 5000</button>
+  <button id="food" class="ham" value={1000}>Food 1000</button>
+  <button id="sitcks" class="ham" value={500}>Sticks 500</button>
+  <button id="ball" class="ham" value={900}> Ball 900</button>
 </div>
-<script>
-  $("document").ready(function() {
-    let cur = localstorage.getItem("points")
-    $("#totalC").html("Gio Points:" + cur)                                       
-    $("button").click(function(event){
-      let points = event.target.value
-      console.log(points)
-      let current = localstorage.getItem("points")
-      let newP = parseInt(current) - points 
-      localstorage.setItem("points", newP)
-      $("#totalC").html("Gio Points: " + newP)
-    });
-  });
-</script>
